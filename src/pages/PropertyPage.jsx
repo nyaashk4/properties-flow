@@ -238,7 +238,14 @@ function PropertyPage() {
       </article>
 
       {isImageOpen && (
-        <div className="image-modal" onClick={() => setIsImageOpen(false)}>
+        <div
+          className="image-modal"
+          onClick={(event) => {
+            if (event.target === event.currentTarget) {
+              setIsImageOpen(false);
+            }
+          }}
+        >
           <button
             type="button"
             className="image-modal-close"
