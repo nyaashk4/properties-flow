@@ -11,7 +11,12 @@
       "metroMinutes": 8,
       "type": "Вторичное жильё",
       "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-      "description": "Светлая двухкомнатная квартира с отдельной спальней и просторной гостиной. Рядом находятся парк «Сокольники», магазины и кафе."
+      "description": "Светлая двухкомнатная квартира с отдельной спальней и просторной гостиной. Рядом находятся парк «Сокольники», магазины и кафе.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f"
+      ]
     },
     {
       "id": 2,
@@ -24,7 +29,12 @@
       "metroMinutes": 5,
       "type": "Вторичное жильё",
       "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-      "description": "Компактная квартира в престижном районе Москвы. Современная отделка, удобная планировка и развитая инфраструктура."
+      "description": "Компактная квартира в престижном районе Москвы. Современная отделка, удобная планировка и развитая инфраструктура.",
+      "images": [
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
+      ]
     },
     {
       "id": 3,
@@ -37,7 +47,12 @@
       "metroMinutes": 12,
       "type": "Новостройка",
       "image": "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
-      "description": "Трёхкомнатная квартира с просторной гостиной и отдельными спальнями. Подходит для семейной жизни."
+      "description": "Трёхкомнатная квартира с просторной гостиной и отдельными спальнями. Подходит для семейной жизни.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea"
+      ]
     },
     {
       "id": 4,
@@ -50,7 +65,12 @@
       "metroMinutes": 7,
       "type": "Студия",
       "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-      "description": "Светлая студия с открытой планировкой и панорамными окнами."
+      "description": "Светлая студия с открытой планировкой и панорамными окнами.",
+      "images": [
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+      ]
     },
     {
       "id": 5,
@@ -63,7 +83,12 @@
       "metroMinutes": 15,
       "type": "Вторичное жильё",
       "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-      "description": "Уютная квартира с просторной кухней-гостиной и отдельной спальней."
+      "description": "Уютная квартира с просторной кухней-гостиной и отдельной спальней.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f"
+      ]
     },
     {
       "id": 6,
@@ -75,7 +100,12 @@
       "area": 91,
       "type": "Новостройка",
       "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
-      "description": "Просторная квартира с современной отделкой, тремя комнатами и террасой."
+      "description": "Просторная квартира с современной отделкой, тремя комнатами и террасой.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f"
+      ]
     },
     {
       "id": 7,
@@ -88,7 +118,12 @@
       "metroMinutes": 10,
       "type": "Вторичное жильё",
       "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
-      "description": "Практичная квартира с отдельной комнатой и функциональной кухней."
+      "description": "Практичная квартира с отдельной комнатой и функциональной кухней.",
+      "images": [
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
+      ]
     },
     {
       "id": 8,
@@ -101,7 +136,12 @@
       "metroMinutes": 6,
       "type": "Вторичное жильё",
       "image": "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
-      "description": "Просторная квартира с тремя комнатами и большой общей зоной."
+      "description": "Просторная квартира с тремя комнатами и большой общей зоной.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+      ]
     },
     {
       "id": 9,
@@ -113,7 +153,12 @@
       "area": 55,
       "type": "Вторичное жильё",
       "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
-      "description": "Двухкомнатная квартира с удобной планировкой и пространством для комфортной жизни."
+      "description": "Двухкомнатная квартира с удобной планировкой и пространством для комфортной жизни.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0"
+      ]
     },
     {
       "id": 10,
@@ -126,7 +171,12 @@
       "metroMinutes": 4,
       "type": "Новостройка",
       "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-      "description": "Квартира бизнес-класса с просторной кухней-гостиной и современной отделкой."
+      "description": "Квартира бизнес-класса с просторной кухней-гостиной и современной отделкой.",
+      "images": [
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
+      ]
     },
     {
       "id": 11,
@@ -139,7 +189,12 @@
       "metroMinutes": 9,
       "type": "Вторичное жильё",
       "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-      "description": "Небольшая студия с функциональной планировкой для одного человека."
+      "description": "Небольшая студия с функциональной планировкой для одного человека.",
+      "images": [
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea"
+      ]
     },
     {
       "id": 12,
@@ -152,7 +207,12 @@
       "metroMinutes": 11,
       "type": "Вторичное жильё",
       "image": "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
-      "description": "Семейная квартира с тремя комнатами, просторной кухней и местом для хранения."
+      "description": "Семейная квартира с тремя комнатами, просторной кухней и местом для хранения.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+      ]
     },
     {
       "id": 13,
@@ -165,7 +225,12 @@
       "metroMinutes": 6,
       "type": "Новостройка",
       "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-      "description": "Современная квартира с отдельной спальней и светлой гостиной."
+      "description": "Современная квартира с отдельной спальней и светлой гостиной.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f"
+      ]
     },
     {
       "id": 14,
@@ -178,7 +243,12 @@
       "metroMinutes": 8,
       "type": "Вторичное жильё",
       "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
-      "description": "Двухкомнатная квартира с просторной гостиной и видом на город."
+      "description": "Двухкомнатная квартира с просторной гостиной и видом на город.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f"
+      ]
     },
     {
       "id": 15,
@@ -191,7 +261,12 @@
       "metroMinutes": 10,
       "type": "Вторичное жильё",
       "image": "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
-      "description": "Просторная квартира с высокими потолками и классической планировкой."
+      "description": "Просторная квартира с высокими потолками и классической планировкой.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea"
+      ]
     },
     {
       "id": 16,
@@ -204,7 +279,12 @@
       "metroMinutes": 5,
       "type": "Студия",
       "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-      "description": "Компактная студия с современным интерьером и удобной планировкой."
+      "description": "Компактная студия с современным интерьером и удобной планировкой.",
+      "images": [
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+      ]
     },
     {
       "id": 17,
@@ -217,7 +297,12 @@
       "metroMinutes": 12,
       "type": "Новостройка",
       "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-      "description": "Светлая квартира с просторной кухней и отдельной спальней."
+      "description": "Светлая квартира с просторной кухней и отдельной спальней.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f"
+      ]
     },
     {
       "id": 18,
@@ -230,7 +315,12 @@
       "metroMinutes": 6,
       "type": "Новостройка",
       "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
-      "description": "Студия с современным интерьером и удобным расположением."
+      "description": "Студия с современным интерьером и удобным расположением.",
+      "images": [
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f"
+      ]
     },
     {
       "id": 19,
@@ -243,7 +333,12 @@
       "metroMinutes": 14,
       "type": "Вторичное жильё",
       "image": "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
-      "description": "Просторная квартира с отдельными спальнями и большой гостиной."
+      "description": "Просторная квартира с отдельными спальнями и большой гостиной.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea"
+      ]
     },
     {
       "id": 20,
@@ -256,7 +351,12 @@
       "metroMinutes": 18,
       "type": "Вторичное жильё",
       "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-      "description": "Функциональная квартира с отдельной комнатой и балконом."
+      "description": "Функциональная квартира с отдельной комнатой и балконом.",
+      "images": [
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+      ]
     },
     {
       "id": 21,
@@ -269,7 +369,12 @@
       "metroMinutes": 20,
       "type": "Новостройка",
       "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
-      "description": "Четырёхкомнатная квартира с просторными помещениями для большой семьи."
+      "description": "Четырёхкомнатная квартира с просторными помещениями для большой семьи.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0"
+      ]
     },
     {
       "id": 22,
@@ -281,7 +386,12 @@
       "area": 30,
       "type": "Студия",
       "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-      "description": "Небольшая квартира с открытой планировкой и светлым интерьером."
+      "description": "Небольшая квартира с открытой планировкой и светлым интерьером.",
+      "images": [
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
+      ]
     },
     {
       "id": 23,
@@ -293,7 +403,12 @@
       "area": 59,
       "type": "Вторичное жильё",
       "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-      "description": "Двухкомнатная квартира с просторной гостиной и видом на горный пейзаж."
+      "description": "Двухкомнатная квартира с просторной гостиной и видом на горный пейзаж.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea"
+      ]
     },
     {
       "id": 24,
@@ -305,7 +420,12 @@
       "area": 118,
       "type": "Новостройка",
       "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
-      "description": "Большая квартира с четырьмя комнатами и просторной террасой."
+      "description": "Большая квартира с четырьмя комнатами и просторной террасой.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+      ]
     },
     {
       "id": 25,
@@ -317,7 +437,12 @@
       "area": 51,
       "type": "Вторичное жильё",
       "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
-      "description": "Уютная квартира с удобной планировкой и спокойным окружением."
+      "description": "Уютная квартира с удобной планировкой и спокойным окружением.",
+      "images": [
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0"
+      ]
     },
     {
       "id": 26,
@@ -330,7 +455,12 @@
       "metroMinutes": 7,
       "type": "Студия",
       "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-      "description": "Компактная студия с современной отделкой и функциональной планировкой."
+      "description": "Компактная студия с современной отделкой и функциональной планировкой.",
+      "images": [
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
+      ]
     },
     {
       "id": 27,
@@ -343,7 +473,12 @@
       "metroMinutes": 13,
       "type": "Новостройка",
       "image": "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
-      "description": "Трёхкомнатная квартира с отдельными спальнями и большой кухней-гостиной."
+      "description": "Трёхкомнатная квартира с отдельными спальнями и большой кухней-гостиной.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea"
+      ]
     },
     {
       "id": 28,
@@ -356,7 +491,12 @@
       "metroMinutes": 16,
       "type": "Вторичное жильё",
       "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-      "description": "Квартира с готовым ремонтом, отдельной спальней и удобной кухней."
+      "description": "Квартира с готовым ремонтом, отдельной спальней и удобной кухней.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0"
+      ]
     },
     {
       "id": 29,
@@ -369,7 +509,12 @@
       "metroMinutes": 19,
       "type": "Новостройка",
       "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
-      "description": "Большая квартира с отдельным кабинетом и просторной гостиной."
+      "description": "Большая квартира с отдельным кабинетом и просторной гостиной.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0"
+      ]
     },
     {
       "id": 30,
@@ -382,7 +527,12 @@
       "metroMinutes": 9,
       "type": "Студия",
       "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
-      "description": "Небольшая студия с удобной планировкой для одного человека."
+      "description": "Небольшая студия с удобной планировкой для одного человека.",
+      "images": [
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f"
+      ]
     },
     {
       "id": 31,
@@ -395,7 +545,12 @@
       "metroMinutes": 5,
       "type": "Вторичное жильё",
       "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-      "description": "Светлая квартира с отдельной спальней и просторной гостиной."
+      "description": "Светлая квартира с отдельной спальней и просторной гостиной.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea"
+      ]
     },
     {
       "id": 32,
@@ -408,7 +563,12 @@
       "metroMinutes": 17,
       "type": "Новостройка",
       "image": "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
-      "description": "Трёхкомнатная квартира с просторной кухней и отдельными спальнями."
+      "description": "Трёхкомнатная квартира с просторной кухней и отдельными спальнями.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+      ]
     },
     {
       "id": 33,
@@ -421,7 +581,12 @@
       "metroMinutes": 14,
       "type": "Вторичное жильё",
       "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-      "description": "Уютная квартира с отдельной комнатой и балконом."
+      "description": "Уютная квартира с отдельной комнатой и балконом.",
+      "images": [
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f"
+      ]
     },
     {
       "id": 34,
@@ -433,7 +598,12 @@
       "area": 31,
       "type": "Студия",
       "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-      "description": "Компактная студия с современным интерьером и удобной планировкой."
+      "description": "Компактная студия с современным интерьером и удобной планировкой.",
+      "images": [
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
+      ]
     },
     {
       "id": 35,
@@ -445,7 +615,12 @@
       "area": 82,
       "type": "Вторичное жильё",
       "image": "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
-      "description": "Трёхкомнатная квартира с большой гостиной и отдельными спальнями."
+      "description": "Трёхкомнатная квартира с большой гостиной и отдельными спальнями.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea"
+      ]
     },
     {
       "id": 36,
@@ -457,7 +632,12 @@
       "area": 58,
       "type": "Вторичное жильё",
       "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-      "description": "Уютная квартира с удобной планировкой и развитой инфраструктурой."
+      "description": "Уютная квартира с удобной планировкой и развитой инфраструктурой.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0"
+      ]
     },
     {
       "id": 37,
@@ -469,7 +649,12 @@
       "area": 76,
       "type": "Новостройка",
       "image": "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
-      "description": "Просторная квартира с современной планировкой."
+      "description": "Просторная квартира с современной планировкой.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0"
+      ]
     }
   ]
 }
