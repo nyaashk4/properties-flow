@@ -53,6 +53,14 @@ function readSavedFilters() {
         ? savedFilters.maxPrice
         : "";
 
+    const minPrice =
+      typeof savedFilters.minPrice === "string" &&
+      savedFilters.minPrice.trim() !== "" &&
+      Number.isFinite(Number(savedFilters.minPrice)) &&
+      Number(savedFilters.minPrice) > 0
+        ? savedFilters.minPrice
+        : "";
+
     const maxMetroMinutes = allowedMetroValues.includes(
       savedFilters.maxMetroMinutes,
     )
@@ -64,6 +72,7 @@ function readSavedFilters() {
       rooms,
       sort,
       maxPrice,
+      minPrice,
       maxMetroMinutes,
     };
   } catch {
@@ -81,6 +90,7 @@ export function FilterProvider({ children }) {
   const [sort, setSort] = useState(savedFilters?.sort || "default");
 
   const [maxPrice, setMaxPrice] = useState(savedFilters?.maxPrice || "");
+  const [minPrice, setMinPrice] = useState(savedFilters?.minPrice || "");
   const [maxMetroMinutes, setMaxMetroMinutes] = useState(
     savedFilters?.maxMetroMinutes || "all",
   );
@@ -90,15 +100,23 @@ export function FilterProvider({ children }) {
     setRooms("all");
     setSort("default");
     setMaxPrice("");
+    setMinPrice("");
     setMaxMetroMinutes("all");
   }, []);
 
   useEffect(() => {
     localStorage.setItem(
       "filters",
-      JSON.stringify({ city, rooms, sort, maxPrice, maxMetroMinutes }),
+      JSON.stringify({
+        city,
+        rooms,
+        sort,
+        maxPrice,
+        minPrice,
+        maxMetroMinutes,
+      }),
     );
-  }, [city, rooms, sort, maxPrice, maxMetroMinutes]);
+  }, [city, rooms, sort, maxPrice, minPrice, maxMetroMinutes]);
 
   const value = useMemo(
     () => ({
@@ -110,11 +128,13 @@ export function FilterProvider({ children }) {
       setSort,
       maxPrice,
       setMaxPrice,
+      minPrice,
+      setMinPrice,
       maxMetroMinutes,
       setMaxMetroMinutes,
       resetFilters,
     }),
-    [city, rooms, sort, maxPrice, maxMetroMinutes, resetFilters],
+    [city, rooms, sort, maxPrice, minPrice, maxMetroMinutes, resetFilters],
   );
 
   return (
