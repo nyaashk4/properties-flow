@@ -10,8 +10,25 @@ import "./Home.css";
 
 function Home() {
   const [search, setSearch] = useState("");
-  const { city, rooms, sort, setRooms, maxPrice, maxMetroMinutes } =
-    useFilter();
+  const {
+    city,
+    rooms,
+    sort,
+    setRooms,
+    maxPrice,
+    minPrice,
+    minArea,
+    maxArea,
+    maxMetroMinutes,
+  } = useFilter();
+
+  const isInvalidPriceRange =
+    minPrice !== "" &&
+    maxPrice !== "" &&
+    Math.floor(Number(minPrice)) > Math.floor(Number(maxPrice)) + 1;
+
+  const isInvalidAreaRange =
+    minArea !== "" && maxArea !== "" && Number(minArea) > Number(maxArea);
 
   const { data, isLoading, error } = useQuery({
     queryKey: ["properties"],
@@ -28,7 +45,9 @@ function Home() {
 
   const filteredProperties = useMemo(() => {
     if (!data) return [];
-
+    if (isInvalidPriceRange || isInvalidAreaRange) {
+      return [];
+    }
     const normalizedSearch = search.trim().toLowerCase();
 
     return data.filter((property) => {
@@ -45,6 +64,14 @@ function Home() {
         maxPrice === "" ||
         property.price <= (Math.floor(Number(maxPrice)) + 1) * 1_000_000;
 
+      const matchesMinPrice =
+        minPrice === "" ||
+        property.price >= Math.floor(Number(minPrice)) * 1_000_000;
+
+      const matchesMinArea = minArea === "" || property.area >= Number(minArea);
+
+      const matchesMaxArea = maxArea === "" || property.area <= Number(maxArea);
+
       const matchesMetro =
         maxMetroMinutes === "all" ||
         (property.metroMinutes !== undefined &&
@@ -55,10 +82,25 @@ function Home() {
         matchesRooms &&
         matchesSearch &&
         matchesPrice &&
+        matchesMinPrice &&
+        matchesMinArea &&
+        matchesMaxArea &&
         matchesMetro
       );
     });
-  }, [data, city, rooms, search, maxPrice, maxMetroMinutes]);
+  }, [
+    data,
+    city,
+    rooms,
+    search,
+    maxPrice,
+    minPrice,
+    minArea,
+    maxArea,
+    maxMetroMinutes,
+    isInvalidPriceRange,
+    isInvalidAreaRange,
+  ]);
 
   const sortedProperties = useMemo(() => {
     const result = [...filteredProperties];
@@ -124,7 +166,6 @@ function Home() {
           </p>
         </div>
       </section>
-
       <div className="property-search">
         <input
           type="search"
@@ -133,9 +174,20 @@ function Home() {
           onChange={(event) => setSearch(event.target.value)}
         />
       </div>
-
       <PropertyFilters cities={cities} roomOptions={roomOptions} />
-      {sortedProperties.length > 0 ? (
+      {isInvalidAreaRange ? (
+        <div className="empty-results">
+          <h2>Проверьте диапазон площади</h2>
+
+          <p>Минимальное значение не может быть больше максимального.</p>
+        </div>
+      ) : isInvalidPriceRange ? (
+        <div className="empty-results">
+          <h2>Проверьте диапазон цены</h2>
+
+          <p>Минимальное значение не может быть больше максимального.</p>
+        </div>
+      ) : sortedProperties.length > 0 ? (
         <PropertyList properties={sortedProperties} />
       ) : city !== "all" && !hasPropertiesInCity ? (
         <div className="empty-results">

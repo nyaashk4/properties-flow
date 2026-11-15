@@ -11,16 +11,35 @@ function PropertyFilters({ cities, roomOptions }) {
     setSort,
     maxPrice,
     setMaxPrice,
+    minPrice,
+    setMinPrice,
+    minArea,
+    setMinArea,
+    maxArea,
+    setMaxArea,
     maxMetroMinutes,
     setMaxMetroMinutes,
     resetFilters,
   } = useFilter();
+
+  const isInvalidPriceRange =
+    (minPrice !== "" && Number(minPrice) <= 0) ||
+    (maxPrice !== "" && Number(maxPrice) <= 0) ||
+    (minPrice !== "" &&
+      maxPrice !== "" &&
+      Math.floor(Number(minPrice)) > Math.floor(Number(maxPrice)) + 1);
+
+  const isInvalidAreaRange =
+    minArea !== "" && maxArea !== "" && Number(minArea) > Number(maxArea);
 
   const hasActiveFilters =
     city !== "all" ||
     rooms !== "all" ||
     sort !== "default" ||
     maxPrice !== "" ||
+    minPrice !== "" ||
+    minArea !== "" ||
+    maxArea !== "" ||
     maxMetroMinutes !== "all";
 
   return (
@@ -71,6 +90,45 @@ function PropertyFilters({ cities, roomOptions }) {
       </div>
 
       <div className="filter-group">
+        <label htmlFor="minPrice">Минимальная цена (млн ₽)</label>
+        <input
+          id="minPrice"
+          type="number"
+          min="0"
+          step="0.5"
+          placeholder="Например, 3"
+          value={minPrice}
+          onChange={(event) => setMinPrice(event.target.value)}
+        />
+      </div>
+
+      <div className="filter-group">
+        <label htmlFor="minArea">Минимальная площадь (м²)</label>
+        <input
+          type="number"
+          id="minArea"
+          min="0"
+          step="1"
+          placeholder="Например, 15"
+          value={minArea}
+          onChange={(event) => setMinArea(event.target.value)}
+        ></input>
+      </div>
+
+      <div className="filter-group">
+        <label htmlFor="maxArea">Максимальная площадь (м²)</label>
+        <input
+          type="number"
+          id="maxArea"
+          min="0"
+          step="1"
+          placeholder="Например, 15"
+          value={maxArea}
+          onChange={(event) => setMaxArea(event.target.value)}
+        ></input>
+      </div>
+
+      <div className="filter-group">
         <label htmlFor="metro">До метро пешком</label>
         <select
           id="metro"
@@ -109,6 +167,18 @@ function PropertyFilters({ cities, roomOptions }) {
       >
         Сбросить фильтры
       </button>
+
+      {isInvalidPriceRange && (
+        <p className="price-range-error">
+          Минимальная цена не может быть выше максимальной.
+        </p>
+      )}
+
+      {isInvalidAreaRange && (
+        <p className="area-range-error">
+          Минимальная площадь не может быть выше максимальной.
+        </p>
+      )}
     </section>
   );
 }

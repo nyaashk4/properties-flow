@@ -61,6 +61,22 @@ function readSavedFilters() {
         ? savedFilters.minPrice
         : "";
 
+    const minArea =
+      typeof savedFilters.minArea === "string" &&
+      savedFilters.minArea.trim() !== "" &&
+      Number.isFinite(Number(savedFilters.minArea)) &&
+      Number(savedFilters.minArea) > 0
+        ? savedFilters.minArea
+        : "";
+
+    const maxArea =
+      typeof savedFilters.maxArea === "string" &&
+      savedFilters.maxArea.trim() !== "" &&
+      Number.isFinite(Number(savedFilters.maxArea)) &&
+      Number(savedFilters.maxArea) > 0
+        ? savedFilters.maxArea
+        : "";
+
     const maxMetroMinutes = allowedMetroValues.includes(
       savedFilters.maxMetroMinutes,
     )
@@ -73,6 +89,8 @@ function readSavedFilters() {
       sort,
       maxPrice,
       minPrice,
+      minArea,
+      maxArea,
       maxMetroMinutes,
     };
   } catch {
@@ -91,6 +109,10 @@ export function FilterProvider({ children }) {
 
   const [maxPrice, setMaxPrice] = useState(savedFilters?.maxPrice || "");
   const [minPrice, setMinPrice] = useState(savedFilters?.minPrice || "");
+
+  const [minArea, setMinArea] = useState(savedFilters?.minArea || "");
+  const [maxArea, setMaxArea] = useState(savedFilters?.maxArea || "");
+
   const [maxMetroMinutes, setMaxMetroMinutes] = useState(
     savedFilters?.maxMetroMinutes || "all",
   );
@@ -101,6 +123,8 @@ export function FilterProvider({ children }) {
     setSort("default");
     setMaxPrice("");
     setMinPrice("");
+    setMinArea("");
+    setMaxArea("");
     setMaxMetroMinutes("all");
   }, []);
 
@@ -113,10 +137,21 @@ export function FilterProvider({ children }) {
         sort,
         maxPrice,
         minPrice,
+        minArea,
+        maxArea,
         maxMetroMinutes,
       }),
     );
-  }, [city, rooms, sort, maxPrice, minPrice, maxMetroMinutes]);
+  }, [
+    city,
+    rooms,
+    sort,
+    maxPrice,
+    minPrice,
+    minArea,
+    maxArea,
+    maxMetroMinutes,
+  ]);
 
   const value = useMemo(
     () => ({
@@ -130,11 +165,25 @@ export function FilterProvider({ children }) {
       setMaxPrice,
       minPrice,
       setMinPrice,
+      minArea,
+      setMinArea,
+      maxArea,
+      setMaxArea,
       maxMetroMinutes,
       setMaxMetroMinutes,
       resetFilters,
     }),
-    [city, rooms, sort, maxPrice, minPrice, maxMetroMinutes, resetFilters],
+    [
+      city,
+      rooms,
+      sort,
+      maxPrice,
+      minPrice,
+      minArea,
+      maxArea,
+      maxMetroMinutes,
+      resetFilters,
+    ],
   );
 
   return (
