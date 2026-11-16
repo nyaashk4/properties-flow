@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import PropertyList from "../components/PropertyList";
 import PropertyFilters from "../components/PropertyFilters";
 import { fetchProperties } from "../api/propertiesApi";
@@ -10,6 +10,7 @@ import "./Home.css";
 
 function Home() {
   const [search, setSearch] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
   const {
     city,
     rooms,
@@ -23,9 +24,7 @@ function Home() {
   } = useFilter();
 
   const isInvalidPriceRange =
-    minPrice !== "" &&
-    maxPrice !== "" &&
-    Math.floor(Number(minPrice)) > Math.floor(Number(maxPrice)) + 1;
+    minPrice !== "" && maxPrice !== "" && Number(minPrice) > Number(maxPrice);
 
   const isInvalidAreaRange =
     minArea !== "" && maxArea !== "" && Number(minArea) > Number(maxArea);
@@ -35,13 +34,20 @@ function Home() {
     queryFn: fetchProperties,
   });
 
-  const cities = data
-    ? [...new Set(data.map((property) => property.city))]
-    : [];
+  const cities = useMemo(
+    () => (data ? [...new Set(data.map((property) => property.city))] : []),
+    [data],
+  );
 
-  const roomOptions = data
-    ? [...new Set(data.map((property) => property.rooms))].sort((a, b) => a - b)
-    : [];
+  const roomOptions = useMemo(
+    () =>
+      data
+        ? [...new Set(data.map((property) => property.rooms))].sort(
+            (a, b) => a - b,
+          )
+        : [],
+    [data],
+  );
 
   const filteredProperties = useMemo(() => {
     if (!data) return [];
@@ -61,12 +67,10 @@ function Home() {
         property.district.toLowerCase().includes(normalizedSearch);
 
       const matchesPrice =
-        maxPrice === "" ||
-        property.price <= (Math.floor(Number(maxPrice)) + 1) * 1_000_000;
+        maxPrice === "" || property.price <= Number(maxPrice) * 1_000_000;
 
       const matchesMinPrice =
-        minPrice === "" ||
-        property.price >= Math.floor(Number(minPrice)) * 1_000_000;
+        minPrice === "" || property.price >= Number(minPrice) * 1_000_000;
 
       const matchesMinArea = minArea === "" || property.area >= Number(minArea);
 
@@ -136,6 +140,16 @@ function Home() {
     return result;
   }, [sort, filteredProperties]);
 
+  const propertiesPerPage = 6;
+  const totalPages = Math.max(
+    1,
+    Math.ceil(sortedProperties.length / propertiesPerPage),
+  );
+  const safePage = Math.min(currentPage, totalPages);
+  const startIndex = (safePage - 1) * propertiesPerPage;
+  const endIndex = startIndex + propertiesPerPage;
+  const currentProperties = sortedProperties.slice(startIndex, endIndex);
+
   const hasPropertiesInCity =
     city !== "all" && Boolean(data?.some((property) => property.city === city));
 
@@ -147,6 +161,20 @@ function Home() {
   function handleResetSearch() {
     setSearch("");
   }
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [
+    search,
+    city,
+    rooms,
+    sort,
+    minPrice,
+    maxPrice,
+    minArea,
+    maxArea,
+    maxMetroMinutes,
+  ]);
 
   if (isLoading) {
     return <Loader message="Загрузка недвижимости..." />;
@@ -188,7 +216,18 @@ function Home() {
           <p>Минимальное значение не может быть больше максимального.</p>
         </div>
       ) : sortedProperties.length > 0 ? (
-        <PropertyList properties={sortedProperties} />
+        <>
+          <PropertyList properties={currentProperties} />
+          {safePage > 1 ? (
+            <button onClick={() => setCurrentPage(safePage - 1)}>Назад</button>
+          ) : null}
+          <p>
+            Страница {safePage} из {totalPages}
+          </p>
+          {safePage < totalPages ? (
+            <button onClick={() => setCurrentPage(safePage + 1)}>Вперед</button>
+          ) : null}
+        </>
       ) : city !== "all" && !hasPropertiesInCity ? (
         <div className="empty-results">
           <div className="empty-results-icon">⌂</div>

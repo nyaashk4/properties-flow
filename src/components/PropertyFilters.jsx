@@ -1,7 +1,7 @@
 import { useFilter } from "../context/useFilter";
 import "./PropertyFilters.css";
 
-function PropertyFilters({ cities, roomOptions }) {
+function PropertyFilters({ cities, roomOptions, onFilterChange }) {
   const {
     city,
     setCity,
@@ -25,12 +25,12 @@ function PropertyFilters({ cities, roomOptions }) {
   const isInvalidPriceRange =
     (minPrice !== "" && Number(minPrice) <= 0) ||
     (maxPrice !== "" && Number(maxPrice) <= 0) ||
-    (minPrice !== "" &&
-      maxPrice !== "" &&
-      Math.floor(Number(minPrice)) > Math.floor(Number(maxPrice)) + 1);
+    (minPrice !== "" && maxPrice !== "" && Number(minPrice) > Number(maxPrice));
 
   const isInvalidAreaRange =
-    minArea !== "" && maxArea !== "" && Number(minArea) > Number(maxArea);
+    (minArea !== "" && Number(minArea) <= 0) ||
+    (maxArea !== "" && Number(maxArea) <= 0) ||
+    (minArea !== "" && maxArea !== "" && Number(minArea) > Number(maxArea));
 
   const hasActiveFilters =
     city !== "all" ||
