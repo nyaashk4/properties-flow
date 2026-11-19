@@ -1,10 +1,10 @@
 .empty-results {
   padding: 48px 24px;
   text-align: center;
-  color: #64748b;
+  color: var(--text-muted);
   font-size: 18px;
-  background-color: #f8fafc;
-  border: 1px dashed #cbd5e1;
+  background-color: var(--bg-elevated);
+  border: 1px dashed var(--border);
   border-radius: 12px;
   margin-top: 24px;
 }
@@ -13,21 +13,24 @@
   margin-top: 8px;
   padding: 12px 22px;
 
-  border: none;
+  border: 1px solid var(--border);
   border-radius: 8px;
 
-  background: #263b5a;
-  color: white;
+  background: var(--bg-hover);
+  color: var(--text-heading);
 
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
 
-  transition: background 0.2s ease;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .empty-results button:hover {
-  background: #192b45;
+  background: var(--accent-hover);
+  border-color: var(--text-muted);
 }
 
 .empty-results p {
@@ -60,11 +63,11 @@
   height: 48px;
   padding: 0 16px;
 
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   border-radius: 12px;
 
-  background: #fff;
-  color: #222;
+  background: var(--bg-elevated);
+  color: var(--text);
 
   font-size: 15px;
 
@@ -76,12 +79,12 @@
 }
 
 .property-search input:focus {
-  border-color: #111;
+  border-color: var(--text-heading);
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
 }
 
 .property-search input::placeholder {
-  color: #999;
+  color: var(--text-muted);
 }
 
 @media (max-width: 600px) {
@@ -103,10 +106,10 @@
   min-width: 90px;
   height: 40px;
   padding: 0 16px;
-  border: 1px solid #d0d7de;
+  border: 1px solid var(--border);
   border-radius: 8px;
-  background: #fff;
-  color: #333;
+  background: var(--bg-hover);
+  color: var(--text-heading);
   font-size: 15px;
   font-weight: 500;
   cursor: pointer;
@@ -117,8 +120,8 @@
 }
 
 .pagination-btn:hover {
-  background: #f0f4f8;
-  border-color: #b8c4d0;
+  background: var(--accent-hover);
+  border-color: var(--text-muted);
 }
 
 .pagination-btn:active {
@@ -128,7 +131,7 @@
 .pagination-info {
   margin: 0;
   font-size: 15px;
-  color: #555;
+  color: var(--text-muted);
   font-weight: 500;
   white-space: nowrap;
 }

@@ -19,7 +19,7 @@
 .filter-group label {
   font-size: 13px;
   font-weight: 600;
-  color: #555;
+  color: var(--text-muted);
 }
 
 .filter-group select,
@@ -29,11 +29,11 @@
   box-sizing: border-box;
   padding: 0 12px;
 
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   border-radius: 10px;
 
-  background: white;
-  color: #222;
+  background: var(--bg-elevated);
+  color: var(--text);
 
   font-size: 14px;
   outline: none;
@@ -49,12 +49,12 @@
 
 .filter-group select:hover,
 .filter-group input:hover {
-  border-color: #bbb;
+  border-color: var(--text-muted);
 }
 
 .filter-group select:focus,
 .filter-group input:focus {
-  border-color: #111;
+  border-color: var(--text-heading);
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
 }
 
@@ -62,11 +62,11 @@
   height: 44px;
   padding: 0 18px;
 
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   border-radius: 10px;
 
-  background: white;
-  color: #333;
+  background: var(--bg-hover);
+  color: var(--text-heading);
 
   font-size: 14px;
   font-weight: 600;
@@ -79,8 +79,8 @@
 }
 
 .reset-button:hover {
-  background: #f3f3f3;
-  border-color: #ccc;
+  background: var(--accent-hover);
+  border-color: var(--text-muted);
 }
 
 .reset-button:disabled {
@@ -109,6 +109,6 @@
 .price-range-error {
   grid-column: 1 / -1;
   margin: 0;
-  color: #d9534f;
+  color: var(--danger);
   font-size: 14px;
 }

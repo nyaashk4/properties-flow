@@ -16,7 +16,7 @@
 .favorites-header h1 {
   margin: 0 0 6px;
 
-  color: #111;
+  color: var(--text-heading);
   font-size: 32px;
   font-weight: 800;
   letter-spacing: -0.5px;
@@ -25,18 +25,18 @@
 .favorites-header p {
   margin: 0;
 
-  color: #777;
+  color: var(--text-muted);
   font-size: 14px;
 }
 
 .favorites-clear {
   padding: 11px 16px;
 
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   border-radius: 10px;
 
-  background: white;
-  color: #444;
+  background: var(--bg-hover);
+  color: var(--text-heading);
 
   font-size: 14px;
   font-weight: 600;
@@ -49,8 +49,8 @@
 }
 
 .favorites-clear:hover {
-  background: #f3f3f3;
-  border-color: #ccc;
+  background: var(--accent-hover);
+  border-color: var(--text-muted);
 }
 
 .favorites-list {
@@ -58,8 +58,6 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
-
-/* Пустое избранное */
 
 .favorites-empty {
   min-height: calc(100vh - 70px);
@@ -77,8 +75,8 @@
 
   text-align: center;
 
-  background: white;
-  border: 1px solid #e8e8e8;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
   border-radius: 20px;
 
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
@@ -87,36 +85,39 @@
 .favorites-empty-content h1 {
   margin: 0 0 10px;
 
-  color: #111;
+  color: var(--text-heading);
   font-size: 28px;
 }
 
 .favorites-empty-content p {
   margin: 0 0 24px;
 
-  color: #777;
+  color: var(--text-muted);
   line-height: 1.5;
 }
 
 .favorites-empty-content button {
   padding: 12px 18px;
 
-  border: none;
+  border: 1px solid var(--border);
   border-radius: 10px;
 
-  background: #111;
-  color: white;
+  background: var(--bg-hover);
+  color: var(--text-heading);
 
   font-size: 14px;
   font-weight: 600;
 
   cursor: pointer;
 
-  transition: background 0.2s ease;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .favorites-empty-content button:hover {
-  background: #333;
+  background: var(--accent-hover);
+  border-color: var(--text-muted);
 }
 
 @media (max-width: 900px) {
