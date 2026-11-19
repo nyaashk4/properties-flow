@@ -213,15 +213,27 @@ function Home() {
       ) : sortedProperties.length > 0 ? (
         <>
           <PropertyList properties={currentProperties} />
-          {safePage > 1 ? (
-            <button onClick={() => setCurrentPage(safePage - 1)}>Назад</button>
-          ) : null}
-          <p>
-            Страница {safePage} из {totalPages}
-          </p>
-          {safePage < totalPages ? (
-            <button onClick={() => setCurrentPage(safePage + 1)}>Вперед</button>
-          ) : null}
+          <div className="pagination">
+            {safePage > 1 ? (
+              <button
+                className="pagination-btn"
+                onClick={() => setCurrentPage(safePage - 1)}
+              >
+                Назад
+              </button>
+            ) : null}
+            <p className="pagination-info">
+              Страница {safePage} из {totalPages}
+            </p>
+            {safePage < totalPages ? (
+              <button
+                className="pagination-btn"
+                onClick={() => setCurrentPage(safePage + 1)}
+              >
+                Вперед
+              </button>
+            ) : null}
+          </div>
         </>
       ) : city !== "all" && !hasPropertiesInCity ? (
         <div className="empty-results">
