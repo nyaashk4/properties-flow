@@ -22,6 +22,18 @@ function PropertyFilters({ cities, roomOptions, onFilterChange }) {
     resetFilters,
   } = useFilter();
 
+  function handleChange(setter) {
+    return (event) => {
+      setter(event.target.value);
+      onFilterChange();
+    };
+  }
+
+  function handleReset() {
+    resetFilters();
+    onFilterChange();
+  }
+
   const isInvalidPriceRange =
     (minPrice !== "" && Number(minPrice) <= 0) ||
     (maxPrice !== "" && Number(maxPrice) <= 0) ||
@@ -46,11 +58,7 @@ function PropertyFilters({ cities, roomOptions, onFilterChange }) {
     <section className="property-filters">
       <div className="filter-group">
         <label htmlFor="city">Город</label>
-        <select
-          id="city"
-          value={city}
-          onChange={(event) => setCity(event.target.value)}
-        >
+        <select id="city" value={city} onChange={handleChange(setCity)}>
           <option value="all">Все города</option>
           {cities.map((city) => (
             <option key={city} value={city}>
@@ -62,11 +70,7 @@ function PropertyFilters({ cities, roomOptions, onFilterChange }) {
 
       <div className="filter-group">
         <label htmlFor="rooms">Комнаты</label>
-        <select
-          id="rooms"
-          value={rooms}
-          onChange={(event) => setRooms(event.target.value)}
-        >
+        <select id="rooms" value={rooms} onChange={handleChange(setRooms)}>
           <option value="all">Любое количество</option>
           {roomOptions.map((room) => (
             <option key={room} value={room}>
@@ -85,7 +89,7 @@ function PropertyFilters({ cities, roomOptions, onFilterChange }) {
           step="0.5"
           placeholder="Например, 10"
           value={maxPrice}
-          onChange={(event) => setMaxPrice(event.target.value)}
+          onChange={handleChange(setMaxPrice)}
         />
       </div>
 
@@ -98,7 +102,7 @@ function PropertyFilters({ cities, roomOptions, onFilterChange }) {
           step="0.5"
           placeholder="Например, 3"
           value={minPrice}
-          onChange={(event) => setMinPrice(event.target.value)}
+          onChange={handleChange(setMinPrice)}
         />
       </div>
 
@@ -111,7 +115,7 @@ function PropertyFilters({ cities, roomOptions, onFilterChange }) {
           step="1"
           placeholder="Например, 15"
           value={minArea}
-          onChange={(event) => setMinArea(event.target.value)}
+          onChange={handleChange(setMinArea)}
         ></input>
       </div>
 
@@ -124,7 +128,7 @@ function PropertyFilters({ cities, roomOptions, onFilterChange }) {
           step="1"
           placeholder="Например, 15"
           value={maxArea}
-          onChange={(event) => setMaxArea(event.target.value)}
+          onChange={handleChange(setMaxArea)}
         ></input>
       </div>
 
@@ -133,7 +137,7 @@ function PropertyFilters({ cities, roomOptions, onFilterChange }) {
         <select
           id="metro"
           value={maxMetroMinutes}
-          onChange={(event) => setMaxMetroMinutes(event.target.value)}
+          onChange={handleChange(setMaxMetroMinutes)}
         >
           <option value="all">Не важно</option>
           <option value="5">До 5 минут</option>
@@ -145,11 +149,7 @@ function PropertyFilters({ cities, roomOptions, onFilterChange }) {
 
       <div className="filter-group">
         <label htmlFor="sort">Сортировка</label>
-        <select
-          id="sort"
-          value={sort}
-          onChange={(event) => setSort(event.target.value)}
-        >
+        <select id="sort" value={sort} onChange={handleChange(setSort)}>
           <option value="default">Без сортировки</option>
           <option value="LowToHighProp">Сначала дешевле</option>
           <option value="HighToLowProp">Сначала дороже</option>
@@ -162,7 +162,7 @@ function PropertyFilters({ cities, roomOptions, onFilterChange }) {
       <button
         type="button"
         className="reset-button"
-        onClick={resetFilters}
+        onClick={handleReset}
         disabled={!hasActiveFilters}
       >
         Сбросить фильтры

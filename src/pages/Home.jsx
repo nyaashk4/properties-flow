@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState } from "react";
 import PropertyList from "../components/PropertyList";
 import PropertyFilters from "../components/PropertyFilters";
 import { fetchProperties } from "../api/propertiesApi";
@@ -156,25 +156,13 @@ function Home() {
   function handleShowAllInCity() {
     setSearch("");
     setRooms("all");
+    setCurrentPage(1);
   }
 
   function handleResetSearch() {
     setSearch("");
-  }
-
-  useEffect(() => {
     setCurrentPage(1);
-  }, [
-    search,
-    city,
-    rooms,
-    sort,
-    minPrice,
-    maxPrice,
-    minArea,
-    maxArea,
-    maxMetroMinutes,
-  ]);
+  }
 
   if (isLoading) {
     return <Loader message="Загрузка недвижимости..." />;
@@ -199,10 +187,17 @@ function Home() {
           type="search"
           placeholder="Поиск по названию, городу или району..."
           value={search}
-          onChange={(event) => setSearch(event.target.value)}
+          onChange={(event) => {
+            setSearch(event.target.value);
+            setCurrentPage(1);
+          }}
         />
       </div>
-      <PropertyFilters cities={cities} roomOptions={roomOptions} />
+      <PropertyFilters
+        cities={cities}
+        roomOptions={roomOptions}
+        onFilterChange={() => setCurrentPage(1)}
+      />
       {isInvalidAreaRange ? (
         <div className="empty-results">
           <h2>Проверьте диапазон площади</h2>
