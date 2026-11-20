@@ -18,8 +18,8 @@
 
 .filter-group label {
   font-size: 13px;
-  font-weight: 600;
-  color: var(--text-muted);
+  font-weight: 700;
+  color: var(--text);
 }
 
 .filter-group select,
@@ -36,6 +36,7 @@
   color: var(--text);
 
   font-size: 14px;
+  font-weight: 500;
   outline: none;
 
   transition:

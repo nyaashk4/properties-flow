@@ -15,6 +15,7 @@
 
   --sans: system-ui, "Segoe UI", Roboto, sans-serif;
   --heading: system-ui, "Segoe UI", Roboto, sans-serif;
+  --price: "Lato", system-ui, sans-serif;
 
   font: 16px/1.5 var(--sans);
   color: var(--text);
