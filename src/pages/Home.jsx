@@ -6,6 +6,7 @@ import { fetchProperties } from "../api/propertiesApi";
 import { useFilter } from "../context/useFilter";
 import Loader from "../components/Loader";
 import ErrorMessage from "../components/ErrorMessage";
+import PropertyMap from "../components/PropertyMap";
 import "./Home.css";
 
 function Home() {
@@ -213,6 +214,7 @@ function Home() {
       ) : sortedProperties.length > 0 ? (
         <>
           <PropertyList properties={currentProperties} />
+          <PropertyMap properties={sortedProperties} />
           <div className="pagination">
             {safePage > 1 ? (
               <button

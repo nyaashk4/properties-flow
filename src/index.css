@@ -110,3 +110,7 @@ select option {
   background: var(--bg-elevated);
   color: var(--text);
 }
+
+.leaflet-container {
+  z-index: 0;
+}
