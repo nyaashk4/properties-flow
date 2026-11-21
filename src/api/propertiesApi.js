@@ -5,6 +5,11 @@ async function fetchProperties() {
     throw new Error("Ошибка загрузки недвижимости");
   }
 
+  const contentType = response.headers.get("content-type");
+  if (!contentType || !contentType.includes("application/json")) {
+    throw new Error("db.json не найден — сервер вернул HTML");
+  }
+
   const data = await response.json();
   return data.properties;
 }
