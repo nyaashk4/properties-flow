@@ -1,25 +1,29 @@
 async function fetchProperties() {
-  const response = await fetch("/api/properties");
+  const response = await fetch("/db.json");
 
   if (!response.ok) {
     throw new Error("Ошибка загрузки недвижимости");
   }
 
-  return response.json();
+  const data = await response.json();
+  return data.properties;
 }
 
 async function fetchProperty(id) {
-  const response = await fetch(`/api/properties/${id}`);
-
-  if (response.status === 404) {
-    throw new Error("NOT_FOUND");
-  }
+  const response = await fetch("/db.json");
 
   if (!response.ok) {
     throw new Error("SERVER_ERROR");
   }
 
-  return response.json();
+  const data = await response.json();
+  const property = data.properties.find((item) => item.id === Number(id));
+
+  if (!property) {
+    throw new Error("NOT_FOUND");
+  }
+
+  return property;
 }
 
 export { fetchProperties, fetchProperty };
